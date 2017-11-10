@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 3, 2017 11:15:21 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="test.hibernate.models.address" table="ADDRESS">
+        <id name="addressid" type="int" access="field">
+            <column name="ADDRESSID" />
+            <generator class="assigned" />
+        </id>
+        <one-to-one name="cty" class="test.hibernate.models.city"></one-to-one>
+        <one-to-one name="st" class="test.hibernate.models.state"></one-to-one>
+        <one-to-one name="cntry" class="test.hibernate.models.country"></one-to-one>
+        <property name="doorno" type="java.lang.String">
+            <column name="DOORNO" />
+        </property>
+        <property name="streetname" type="java.lang.String">
+            <column name="STREETNAME" />
+        </property>
+        <property name="pincode" type="int">
+            <column name="PINCODE" />
+        </property>
+    </class>
+</hibernate-mapping>

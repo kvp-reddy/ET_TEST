@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 3, 2017 11:15:21 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="test.hibernate.models.designation" table="DESIGNATION">
+        <id name="desgn_id" type="int">
+            <column name="DESGN_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="designation_name" type="java.lang.String">
+            <column name="DESIGNATION_NAME" />
+        </property>
+    </class>
+</hibernate-mapping>

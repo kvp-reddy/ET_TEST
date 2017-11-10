@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 3, 2017 11:15:21 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="test.hibernate.models.employee" table="EMPLOYEE">
+        <id name="empid" type="int" access="field">
+            <column name="EMPID" />
+            <generator class="assigned" />
+        </id>
+        <property name="first_name" type="java.lang.String">
+            <column name="FIRST_NAME" />
+        </property>
+        <property name="last_name" type="java.lang.String">
+            <column name="LAST_NAME" />
+        </property>
+        <property name="joined_date" type="java.sql.Date">
+            <column name="JOINED_DATE" />
+        </property>
+        <one-to-one name="cty" class="test.hibernate.models.city" ></one-to-one>
+        <one-to-one name="st" class="test.hibernate.models.state"></one-to-one>
+        <one-to-one name="cntry" class="test.hibernate.models.country"></one-to-one>
+        <one-to-one name="empadd" class="test.hibernate.models.address"></one-to-one>
+        <one-to-one name="desgn" class="test.hibernate.models.designation"></one-to-one>
+         <one-to-one name="dept" class="test.hibernate.models.department"></one-to-one>
+       
+        <property name="salary" type="int">
+            <column name="SALARY" />
+        </property>
+        <property name="dob" type="java.sql.Date">
+            <column name="DOB" />
+        </property>
+    </class>
+</hibernate-mapping>

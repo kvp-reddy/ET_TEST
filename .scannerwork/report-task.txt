@@ -1,0 +1,6 @@
+projectKey=javaproject
+serverUrl=http://localhost/sonar
+serverVersion=6.6.0.32724
+dashboardUrl=http://localhost/sonar/dashboard/index/javaproject
+ceTaskId=AV-WDEZwAiwE_PV1L12I
+ceTaskUrl=http://localhost/sonar/api/ce/task?id=AV-WDEZwAiwE_PV1L12I
